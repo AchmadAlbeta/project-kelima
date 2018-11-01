@@ -1,0 +1,11 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<app-headeralbeta (featureSelected)="onNavigate($event)"></app-headeralbeta>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <app-recipealbeta *ngIf="loadedFeature === 'recipe'"></app-recipealbeta>
+      <app-shopping-listalbeta *ngIf="loadedFeature !== 'recipe'"></app-shopping-listalbeta>
+      </div>
+  </div>  
+</div>
+
