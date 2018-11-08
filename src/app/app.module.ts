@@ -15,6 +15,7 @@ import { RecipeItemComponent } from './recipealbeta/recipe-list/recipe-item/reci
 import { ShoppingEditComponent } from './shopping-listalbeta/shopping-edit/shopping-edit.component';
 import { FooterAlbetaComponent } from './FooterAlbeta/FooterAlbeta.component';
 import { DropdownDirective } from './shared/dropdown.directive';
+import { ShoppingListService } from './shopping-listalbeta/shopping-list.service'
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { DropdownDirective } from './shared/dropdown.directive';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
