@@ -1,40 +1,49 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule} from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { HeaderalbetaComponent } from './headeralbeta/headeralbeta.component';
-import { RecipealbetaComponent } from './recipealbeta/recipealbeta.component';
-import { ShoppingListalbetaComponent } from './shopping-listalbeta/shopping-listalbeta.component';
+import { HeaderComponent } from './header/header.component';
+import { RecipeComponent } from './recipe/recipe.component';
+import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 
+import { RecipeListComponent } from './recipe/recipe-list/recipe-list.component';
+import { RecipeDetailComponent } from './recipe/recipe-detail/recipe-detail.component';
+import { FooterComponent } from './footer/footer.component';
+import { RecipeItemComponent } from './recipe/recipe-list/recipe-item/recipe-item.component';
 
-import { RecipeListComponent } from './recipealbeta/recipe-list/recipe-list.component';
-import { RecipeDetailalbetaComponent } from './recipealbeta/recipe-detailalbeta/recipe-detailalbeta.component';
-
-import { RecipeItemComponent } from './recipealbeta/recipe-list/recipe-item/recipe-item.component';
-
-import { ShoppingEditComponent } from './shopping-listalbeta/shopping-edit/shopping-edit.component';
-import { FooterAlbetaComponent } from './FooterAlbeta/FooterAlbeta.component';
-import { DropdownDirective } from './shared/dropdown.directive';
-import { ShoppingListService } from './shopping-listalbeta/shopping-list.service'
+import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
+import { DropdownDirective } from "./shared/dropdown.directive";
+import { ShoppingListService } from './shopping-list/shopping-list.service';
+import { RecipeStartComponent } from './recipe/recipe-start/recipe-start.component';
+import { RecipeEditComponent } from './recipe/recipe-edit/recipe-edit.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderalbetaComponent,
-    RecipealbetaComponent,
-    ShoppingListalbetaComponent,
-
-    RecipeListComponent,
-    RecipeDetailalbetaComponent,
-    RecipeItemComponent,
-    ShoppingEditComponent,
-    FooterAlbetaComponent,
-    DropdownDirective
-],
-  imports: [
-    BrowserModule
-  ],
-  providers: [ShoppingListService],
-  bootstrap: [AppComponent]
+   declarations: [
+      AppComponent,
+      HeaderComponent,
+      ShoppingListComponent,
+      ShoppingEditComponent,
+      RecipeComponent,
+      RecipeListComponent,
+      RecipeDetailComponent,
+      RecipeItemComponent,
+      FooterComponent,
+      DropdownDirective,
+      RecipeStartComponent,
+      RecipeEditComponent,
+   ],
+   imports: [
+      BrowserModule,
+      FormsModule,
+      HttpModule,
+      AppRoutingModule
+   ],
+   providers: [ShoppingListService],
+   bootstrap: [
+      AppComponent
+   ]
 })
 export class AppModule { }
